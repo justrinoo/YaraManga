@@ -4,15 +4,15 @@ export default function Hero() {
 	return (
 		<>
 			<section className="mt-16">
-				<div className="container mx-auto px-4 flex items-center">
-					<div className="w-2/4">
+				<div className="container mx-auto px-4 md:flex items-center">
+					<div className="md:w-2/4">
 						<img
 							src={Thumbnail}
-							className="w-full px-16 image-thumb"
+							className="w-full px-16 image-thumb hidden md:block"
 							alt="Thumbnail"
 						/>
 					</div>
-					<div className="w-2/4">
+					<div className="md:w-2/4">
 						<div className="mb-28">
 							<h1 className="text-3xl uppercase font-bold">yara manga</h1>
 							<p className="mt-5 text-justify">
@@ -21,17 +21,17 @@ export default function Hero() {
 								tanpa ada gangguan iklan. Jika ada masalah hubungi saya di menu
 								contact
 							</p>
-							<div class="relative text-gray-600 focus-within:text-gray-400">
-								<span class="absolute inset-y-0 left-0 flex items-center pl-2">
-									<button type="submit" class="p-1 mt-5">
+							<div className="relative text-gray-600 focus-within:text-gray-400">
+								<span className="absolute inset-y-0 left-0 flex items-center pl-2">
+									<button type="submit" className="p-1 mt-5">
 										<svg
 											fill="none"
 											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
 											viewBox="0 0 24 24"
-											class="w-6 h-6"
+											className="w-6 h-6"
 										>
 											<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
 										</svg>

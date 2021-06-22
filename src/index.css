@@ -22,3 +22,9 @@
 .image-popular:hover {
 	background-color: red;
 }
+.text-title-popular {
+	width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
