@@ -34,9 +34,7 @@ export default function PopularKomik() {
 					{popularManga.length > 0
 						? popularManga.map((comic, comIdx) => (
 								<div className="mt-5 mx-2" key={comIdx}>
-									<Link
-										to={`/${comic.type.toLowerCase()}/detail/${comic.endpoint}`}
-									>
+									<Link to={`/manga/detail/${comic.endpoint}`}>
 										<img
 											src={comic.thumb}
 											className="w-full"
@@ -45,13 +43,13 @@ export default function PopularKomik() {
 									</Link>
 									<div className="flex justify-between">
 										<p className="text-title-popular text-lg">{comic.title}</p>
-										<span className="bg-blue-600 w-50 rounded-sm">
-											Type {comic.type}
+										<span className="bg-blue-600 w-50 rounded-sm font-bold">
+											{comic.type}
 										</span>
 									</div>
 								</div>
 						  ))
-						: isLoading && <p>Loading...</p>}
+						: isLoading && <p>Wait is processing comic...</p>}
 				</div>
 			</div>
 		</>

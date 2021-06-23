@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
 	return (
@@ -6,22 +7,22 @@ export default function Header() {
 			<header>
 				<nav className="container mx-auto px-4 flex justify-between items-center">
 					<div className="mt-5">
-						<a href="#" className="font-bold uppercase text-2xl">
+						<Link to="/listmanga" className="font-bold uppercase text-2xl">
 							YM
-						</a>
+						</Link>
 					</div>
 					<div className="mt-5">
-						<a href="" className="font-semibold">
+						<Link to="/listmanga" className="font-semibold">
 							Semua Komik
-						</a>
+						</Link>
 					</div>
 					<div className="mt-5">
-						<a href="" className="font-bold mr-4">
+						<Link to="/listmanga" className="font-bold mr-4">
 							About YM
-						</a>
-						<a href="" className="font-bold">
+						</Link>
+						<Link to="/listmanga" className="font-bold">
 							Contact
-						</a>
+						</Link>
 					</div>
 				</nav>
 			</header>

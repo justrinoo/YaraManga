@@ -32,7 +32,7 @@ export default function DetailManga(props) {
 
 	return (
 		<>
-			<div className="px-12 py-12 h-auto">
+			<div className="px-12 py-12 h-auto md:h-screen">
 				<Link to="/">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -54,29 +54,43 @@ export default function DetailManga(props) {
 						<div className="md:w-1/5">
 							<img
 								src={detailTypeManga.thumb}
-								className="w-52 rounded-md"
+								className="w-52 rounded-md hidden md:block"
 								alt=""
 							/>
 						</div>
 						<div className="md:w-4/5">
-							<div className="md:flex">
-								<div className="bg-blue-400 w-16  rounded">
-									<span className="ml-1">{detailTypeManga.type}</span>
-								</div>
-								<div className="bg-yellow-300 w-20  rounded mx-2">
-									<span className="ml-1">{detailTypeManga.status}</span>
+							<div className="hidden md:block">
+								<div className="flex ">
+									<div className="bg-blue-400 w-16  rounded">
+										<span className="ml-1">{detailTypeManga.type}</span>
+									</div>
+									<div className="bg-yellow-300 w-20  rounded mx-2">
+										<span className="ml-1">{detailTypeManga.status}</span>
+									</div>
 								</div>
 							</div>
-							<h2 className="text-4xl font-bold mt-3">
+							<h2 className="text-4xl font-bold mt-3 text-center md:text-justify">
 								{detailTypeManga.title}
 							</h2>
+							<img
+								src={detailTypeManga.thumb}
+								className="w-52 rounded-md block md:hidden mt-2 mx-auto"
+								alt=""
+							/>
+							<div className="block md:hidden">
+								<div className="flex justify-center mt-3">
+									<div className="bg-blue-400 w-16  rounded">
+										<span className="ml-1">{detailTypeManga.type}</span>
+									</div>
+									<div className="bg-yellow-300 w-20  rounded mx-2 ">
+										<span className="ml-1">{detailTypeManga.status}</span>
+									</div>
+								</div>
+							</div>
 							<p className="text-justify">
 								<p className="mt-5">{detailTypeManga.synopsis}</p>
 							</p>
-							<h4 className="mt-8 text-2xl">
-								{detailTypeManga.title} Chapter{" "}
-								{chapter.length >= 1 ? `1 - ${chapter.length}` : null}
-							</h4>
+							<h4 className="mt-8 text-2xl">{detailTypeManga.title}</h4>
 							<div className="bg-gray-800 w-full mt-4 overflow-auto h-32 ">
 								{chapter.map((item, idx) => (
 									<Link to={`/chapter/${item.chapter_endpoint}`}>
